@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "NODE_ENV=test eslint --ext .js,.jsx --max-warnings 0 .",
-    "test": "NODE_ENV=test jest"
+    "test": "jest"
   },
   "devDependencies": {
     "@emotion/styled": "^11.3.0",
@@ -20,7 +20,8 @@
     "eslint": "^8.2.0",
     "eslint-plugin-react": "^7.27.0",
     "jest": "^27.3.1",
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "peerDependencies": {}
 }
