@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
-import { EventLink } from "@hoa/hoa.ui.event_link"
+import { EventLink } from "../links"
 import classNames from "classnames"
 
 export const CloseButton = ({ className, onClick }) => (
