@@ -1,8 +1,8 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "@emotion/styled"
-import { ExternalLink } from "@hoa/hoa.ui.external_link"
-import { FullWidthSanityImage } from "@hoa/hoa.ui.sanity_image"
+import { ExternalLink } from "../links"
+import { FullWidthSanityImage } from "../sanity_image"
 
 const Styled = styled.div`
   column-gap: 26px;
