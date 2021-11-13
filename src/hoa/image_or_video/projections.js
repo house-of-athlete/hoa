@@ -1,5 +1,5 @@
 import { imageProjection } from "@hoa/hoa.ui.sanity_image"
-import { muxVideoProjection } from "@hoa/hoa.ui.mux_video"
+import { muxVideoProjection } from "../mux_video"
 
 export const imageOrVideoProjection = `{
   "image": image.asset -> ${imageProjection},

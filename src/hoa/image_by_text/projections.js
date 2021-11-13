@@ -1,6 +1,6 @@
 import { blockContentProjection } from "@hoa/hoa.ui.rich_text"
 import { internalLinkProjection } from "../links/projections"
-import { muxVideoProjection } from "@hoa/hoa.ui.mux_video"
+import { muxVideoProjection } from "../mux_video"
 
 export const imageByTextProjection = `{
   content[] ${blockContentProjection},
