@@ -1099,38 +1099,6 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@hoa/hoa.ui.close_button@0.0.3":
-  version "0.0.3"
-  resolved "https://node.bit.dev/@hoa/hoa.ui.close_button/-/@hoa-hoa.ui.close_button-0.0.3.tgz#f88e0759a09f8df1c1ab7cf44a75718f91c75f7c"
-  integrity sha1-+I4HWaCfjfHBq3z0SnVxj5HHX3w=
-  dependencies:
-    "@hoa/hoa.ui.event_link" "0.0.1"
-    core-js "^3.0.0"
-
-"@hoa/hoa.ui.cms_link@0.0.14":
-  version "0.0.14"
-  resolved "https://node.bit.dev/@hoa/hoa.ui.cms_link/-/@hoa-hoa.ui.cms_link-0.0.14.tgz#7b64bd851081eb47c0ba4fea7a75a0fca953a3e8"
-  integrity sha1-e2S9hRCB60fAuk/qenWg/KlTo+g=
-  dependencies:
-    "@hoa/hoa.ui.event_link" "0.0.1"
-    "@hoa/hoa.ui.external_link" "0.0.2"
-    "@hoa/hoa.ui.video_modal" "0.0.5"
-    core-js "^3.0.0"
-
-"@hoa/hoa.ui.event_link@0.0.1":
-  version "0.0.1"
-  resolved "https://node.bit.dev/@hoa/hoa.ui.event_link/-/@hoa-hoa.ui.event_link-0.0.1.tgz#926d3a7474888b47791a114d1d651d8c525139ec"
-  integrity sha1-km06dHSIi0d5GhFNHWUdjFJROew=
-  dependencies:
-    core-js "^3.0.0"
-
-"@hoa/hoa.ui.external_link@0.0.2":
-  version "0.0.2"
-  resolved "https://node.bit.dev/@hoa/hoa.ui.external_link/-/@hoa-hoa.ui.external_link-0.0.2.tgz#9b960f0bc6ecc9c1e576e0e89386a6e62ba64575"
-  integrity sha1-m5YPC8bsycHlduDok4am5iumRXU=
-  dependencies:
-    core-js "^3.0.0"
-
 "@hoa/hoa.ui.image_or_video@^0.0.21":
   version "0.0.21"
   resolved "https://node.bit.dev/@hoa/hoa.ui.image_or_video/-/@hoa-hoa.ui.image_or_video-0.0.21.tgz#cdd6c9d26cd4767f78d12508f7d8c74cd5111f3d"
@@ -1147,31 +1115,12 @@
   dependencies:
     core-js "^3.0.0"
 
-"@hoa/hoa.ui.prevent_scrolling@0.0.2":
-  version "0.0.2"
-  resolved "https://node.bit.dev/@hoa/hoa.ui.prevent_scrolling/-/@hoa-hoa.ui.prevent_scrolling-0.0.2.tgz#88b2e0d6ef14464bd3eedc8aeeaadcb926053c0f"
-  integrity sha1-iLLg1u8URkvT7tyK7qrcuSYFPA8=
-  dependencies:
-    core-js "^3.0.0"
-
 "@hoa/hoa.ui.responsive_grid@^0.0.2":
   version "0.0.2"
   resolved "https://node.bit.dev/@hoa/hoa.ui.responsive_grid/-/@hoa-hoa.ui.responsive_grid-0.0.2.tgz#ed1f15e0297e701e22b13eb2547cc585b303bc0b"
   integrity sha1-7R8V4Cl+cB4isT6yVHzFhbMDvAs=
   dependencies:
     "@hoa/hoa.ui.use_full_width_sizes" "0.0.5"
-    core-js "^3.0.0"
-
-"@hoa/hoa.ui.rich_text@^0.0.17":
-  version "0.0.17"
-  resolved "https://node.bit.dev/@hoa/hoa.ui.rich_text/-/@hoa-hoa.ui.rich_text-0.0.17.tgz#ab84fceecc891bae0c4deec9fbed710f06e317d9"
-  integrity sha1-q4T87syJG64MTe7J++1xDwbjF9k=
-  dependencies:
-    "@hoa/hoa.ui.cms_link" "0.0.14"
-    "@hoa/hoa.ui.external_link" "0.0.2"
-    "@hoa/hoa.ui.mux_video" "0.0.9"
-    "@hoa/hoa.ui.social_links" "0.0.7"
-    "@hoa/hoa.ui.video_modal" "0.0.5"
     core-js "^3.0.0"
 
 "@hoa/hoa.ui.sanity_image@0.0.8":
@@ -1182,31 +1131,11 @@
     "@hoa/hoa.ui.use_full_width_sizes" "0.0.5"
     core-js "^3.0.0"
 
-"@hoa/hoa.ui.social_links@0.0.7":
-  version "0.0.7"
-  resolved "https://node.bit.dev/@hoa/hoa.ui.social_links/-/@hoa-hoa.ui.social_links-0.0.7.tgz#ddf9e7fc8ae771cd685f150ce7d1303b514ffc7d"
-  integrity sha1-3fnn/Irncc1oXxUM59EwO1FP/H0=
-  dependencies:
-    "@hoa/hoa.ui.external_link" "0.0.2"
-    "@hoa/hoa.ui.sanity_image" "0.0.8"
-    core-js "^3.0.0"
-
 "@hoa/hoa.ui.use_full_width_sizes@0.0.5":
   version "0.0.5"
   resolved "https://node.bit.dev/@hoa/hoa.ui.use_full_width_sizes/-/@hoa-hoa.ui.use_full_width_sizes-0.0.5.tgz#20a6d6cdc66e2f76a67512a350ae061ce60f519b"
   integrity sha1-IKbWzcZuL3amdRKjUK4GHOYPUZs=
   dependencies:
-    core-js "^3.0.0"
-
-"@hoa/hoa.ui.video_modal@0.0.5":
-  version "0.0.5"
-  resolved "https://node.bit.dev/@hoa/hoa.ui.video_modal/-/@hoa-hoa.ui.video_modal-0.0.5.tgz#ab619f2ea5e9716096d272cf0000e4872299ff35"
-  integrity sha1-q2GfLqXpcWCW0nLPAADkhyKZ/zU=
-  dependencies:
-    "@hoa/hoa.ui.close_button" "0.0.3"
-    "@hoa/hoa.ui.event_link" "0.0.1"
-    "@hoa/hoa.ui.mux_video" "0.0.9"
-    "@hoa/hoa.ui.prevent_scrolling" "0.0.2"
     core-js "^3.0.0"
 
 "@houseofathlete/eslint-config-hoa@^2.0.0":
