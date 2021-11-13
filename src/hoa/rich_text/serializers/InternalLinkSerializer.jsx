@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
-import { CMSLink } from "@hoa/hoa.ui.cms_link"
+import { CMSLink } from "../../links"
 
 const InternalLinkSerializer = ({ children, mark }) => {
   const [LinkComponent, props] = CMSLink.getInternalLink(mark.doc)
