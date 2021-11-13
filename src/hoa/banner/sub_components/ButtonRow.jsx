@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "@emotion/styled"
-import { CMSLink } from "@hoa/hoa.ui.cms_link"
+import { CMSLink } from "../../links/CMSLink"
 import classNames from "classnames"
 import { kebabCase } from "lodash"
 
