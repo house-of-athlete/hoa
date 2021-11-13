@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
-import { ExternalLink } from "@hoa/hoa.ui.external_link"
+import { ExternalLink } from "../../links"
 
 const LinkSerializer = ({ children, mark }) => (
   <ExternalLink href={mark.href}>{children}</ExternalLink>
