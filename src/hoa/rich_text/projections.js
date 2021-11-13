@@ -1,6 +1,6 @@
 import { internalLinkProjection } from "../links/projections"
 import { muxVideoProjection } from "../mux_video/projections"
-import { socialItemProjection } from "@hoa/hoa.ui.social_links"
+import { socialItemProjection } from "../social_links/projections"
 
 export const blockContentProjection = `{
   ...,

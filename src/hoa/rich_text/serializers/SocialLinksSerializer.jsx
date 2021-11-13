@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "@emotion/styled"
-import { SocialLinks } from "@hoa/hoa.ui.social_links"
+import { SocialLinks } from "../../social_links"
 
 const Styled = styled.div`
   margin-top: 15px;
