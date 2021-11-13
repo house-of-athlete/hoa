@@ -4,7 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "lint": "echo FIXME",
+    "lint": "NODE_ENV=test eslint --ext .js,.jsx --max-warnings 0 .",
     "test": "echo FIXME"
+  },
+  "devDependencies": {
+    "@houseofathlete/eslint-config-hoa": "^2.0.0",
+    "babel-preset-gatsby": "^2.1.2",
+    "eslint": "^8.2.0",
+    "eslint-plugin-react": "^7.27.0"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2"
   }
 }
