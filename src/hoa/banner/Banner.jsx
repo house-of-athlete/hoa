@@ -3,8 +3,8 @@ import React from "react"
 import styled from "@emotion/styled"
 import { CMSLink } from "@hoa/hoa.ui.cms_link"
 import { ImageOrVideo } from "@hoa/hoa.ui.image_or_video"
-import { ButtonRow } from "./banner/ButtonRow"
-import { CustomizableText } from "./banner/CustomizableText"
+import { ButtonRow } from "./sub_components/ButtonRow"
+import { CustomizableText } from "./sub_components/CustomizableText"
 
 const Styled = styled.div`
   height: ${({ $height }) => $height || "auto"};
