@@ -3,7 +3,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { CloseButton } from "../close_button"
 import { MuxVideo } from "../mux_video"
-import { PreventScrolling } from "@hoa/hoa.ui.prevent_scrolling"
+import { PreventScrolling } from "../prevent_scrolling"
 
 const StyledCloseButton = styled(CloseButton)`
   --hoa-close-button-color: var(--hoa-video-modal-close-button-color, #fff);
