@@ -1,4 +1,4 @@
-import { blockContentProjection } from "@hoa/hoa.ui.rich_text"
+import { blockContentProjection } from "../rich_text/projections"
 import { imageOrVideoProjection } from "../image_or_video/projections"
 import { internalLinkProjection } from "../links/projections"
 
