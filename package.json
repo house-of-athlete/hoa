@@ -14,6 +14,7 @@
     "@hoa/hoa.ui.responsive_grid": "^0.0.2",
     "@hoa/hoa.ui.rich_text": "^0.0.17",
     "@houseofathlete/eslint-config-hoa": "^2.0.0",
+    "@sanity/block-content-to-react": "^3.0.0",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
