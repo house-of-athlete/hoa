@@ -4,7 +4,7 @@ import {
   MaxWidthContext,
   SizesContext,
   useFullWidthSizes,
-} from "../src/hoa/use_full_width_sizes"
+} from "../../src/hoa/use_full_width_sizes"
 
 const PrintSizes = () => <pre>{useFullWidthSizes()}</pre>
 

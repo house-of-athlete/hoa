@@ -1,4 +1,4 @@
-import { imageProjection } from "@hoa/hoa.ui.sanity_image"
+import { imageProjection } from "../sanity_image/projections"
 import { internalLinkProjection } from "../links/projections"
 
 export const gridProjection = `{

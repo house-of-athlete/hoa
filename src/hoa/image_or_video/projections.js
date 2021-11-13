@@ -1,4 +1,4 @@
-import { imageProjection } from "@hoa/hoa.ui.sanity_image"
+import { imageProjection } from "../sanity_image/projections"
 import { muxVideoProjection } from "../mux_video/projections"
 
 export const imageOrVideoProjection = `{

@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "@emotion/styled"
 import { StyledRichText } from "@hoa/hoa.ui.rich_text"
-import { FullWidthSanityImage } from "@hoa/hoa.ui.sanity_image"
+import { FullWidthSanityImage } from "../sanity_image"
 import { CMSLink } from "../links"
 import { PlayButtonOverlay } from "../mux_video"
 
