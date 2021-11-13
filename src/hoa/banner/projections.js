@@ -1,5 +1,5 @@
 import { blockContentProjection } from "@hoa/hoa.ui.rich_text"
-import { imageOrVideoProjection } from "@hoa/hoa.ui.image_or_video"
+import { imageOrVideoProjection } from "../image_or_video/projections"
 import { internalLinkProjection } from "@hoa/hoa.ui.cms_link"
 
 export const bannerProjection = `{
