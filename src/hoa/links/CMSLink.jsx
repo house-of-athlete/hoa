@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import { EventLink } from "./EventLink"
 import { ExternalLink } from "./ExternalLink"
-import { VideoModalLink } from "@hoa/hoa.ui.video_modal"
+import { VideoModalLink } from "../video_modal"
 import { isFunction, pick } from "lodash"
 
 const getComponentAndProps = link => {
