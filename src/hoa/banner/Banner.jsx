@@ -1,8 +1,8 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "@emotion/styled"
-import { CMSLink } from "../links/CMSLink"
-import { ImageOrVideo } from "../image_or_video/ImageOrVideo"
+import { CMSLink } from "../links"
+import { ImageOrVideo } from "../image_or_video"
 import { ButtonRow } from "./sub_components/ButtonRow"
 import { CustomizableText } from "./sub_components/CustomizableText"
 

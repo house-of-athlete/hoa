@@ -1,6 +1,6 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import { EventLink } from "../../../src/hoa/links/EventLink"
+import { EventLink } from "../../../src/hoa/links"
 
 it("should render with the correct text", () => {
   const { getByText } = render(

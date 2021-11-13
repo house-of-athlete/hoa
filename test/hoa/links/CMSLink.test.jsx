@@ -1,6 +1,6 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import { CMSLink } from "../../../src/hoa/links/CMSLink"
+import { CMSLink } from "../../../src/hoa/links"
 
 CMSLink.getInternalLink = document => [
   props => <a {...props} />,

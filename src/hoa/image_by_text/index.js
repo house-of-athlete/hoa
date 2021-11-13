@@ -1,0 +1,1 @@
+export { ImageByText } from "./ImageByText"
