@@ -1099,13 +1099,6 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@hoa/hoa.ui.external_link@0.0.2":
-  version "0.0.2"
-  resolved "https://node.bit.dev/@hoa/hoa.ui.external_link/-/@hoa-hoa.ui.external_link-0.0.2.tgz#9b960f0bc6ecc9c1e576e0e89386a6e62ba64575"
-  integrity sha1-m5YPC8bsycHlduDok4am5iumRXU=
-  dependencies:
-    core-js "^3.0.0"
-
 "@hoa/hoa.ui.image_or_video@^0.0.21":
   version "0.0.21"
   resolved "https://node.bit.dev/@hoa/hoa.ui.image_or_video/-/@hoa-hoa.ui.image_or_video-0.0.21.tgz#cdd6c9d26cd4767f78d12508f7d8c74cd5111f3d"
@@ -1136,15 +1129,6 @@
   integrity sha1-L5+nciiXvSm+ulbCVWl1szxT/r8=
   dependencies:
     "@hoa/hoa.ui.use_full_width_sizes" "0.0.5"
-    core-js "^3.0.0"
-
-"@hoa/hoa.ui.social_links@^0.0.7":
-  version "0.0.7"
-  resolved "https://node.bit.dev/@hoa/hoa.ui.social_links/-/@hoa-hoa.ui.social_links-0.0.7.tgz#ddf9e7fc8ae771cd685f150ce7d1303b514ffc7d"
-  integrity sha1-3fnn/Irncc1oXxUM59EwO1FP/H0=
-  dependencies:
-    "@hoa/hoa.ui.external_link" "0.0.2"
-    "@hoa/hoa.ui.sanity_image" "0.0.8"
     core-js "^3.0.0"
 
 "@hoa/hoa.ui.use_full_width_sizes@0.0.5":
