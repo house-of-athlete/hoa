@@ -3,7 +3,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { StyledRichText } from "@hoa/hoa.ui.rich_text"
 import { FullWidthSanityImage } from "@hoa/hoa.ui.sanity_image"
-import { CMSLink } from "@hoa/hoa.ui.cms_link"
+import { CMSLink } from "../links/CMSLink"
 import { PlayButtonOverlay } from "@hoa/hoa.ui.mux_video"
 
 const Styled = styled.div`

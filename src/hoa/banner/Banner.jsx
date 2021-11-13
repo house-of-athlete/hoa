@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "@emotion/styled"
-import { CMSLink } from "@hoa/hoa.ui.cms_link"
+import { CMSLink } from "../links/CMSLink"
 import { ImageOrVideo } from "../image_or_video/ImageOrVideo"
 import { ButtonRow } from "./sub_components/ButtonRow"
 import { CustomizableText } from "./sub_components/CustomizableText"
