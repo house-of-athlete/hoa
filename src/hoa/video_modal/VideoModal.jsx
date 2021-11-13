@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "@emotion/styled"
-import { CloseButton } from "@hoa/hoa.ui.close_button"
+import { CloseButton } from "../close_button"
 import { MuxVideo } from "../mux_video"
 import { PreventScrolling } from "@hoa/hoa.ui.prevent_scrolling"
 
