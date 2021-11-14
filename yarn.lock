@@ -1115,14 +1115,6 @@
   dependencies:
     core-js "^3.0.0"
 
-"@hoa/hoa.ui.responsive_grid@^0.0.2":
-  version "0.0.2"
-  resolved "https://node.bit.dev/@hoa/hoa.ui.responsive_grid/-/@hoa-hoa.ui.responsive_grid-0.0.2.tgz#ed1f15e0297e701e22b13eb2547cc585b303bc0b"
-  integrity sha1-7R8V4Cl+cB4isT6yVHzFhbMDvAs=
-  dependencies:
-    "@hoa/hoa.ui.use_full_width_sizes" "0.0.5"
-    core-js "^3.0.0"
-
 "@hoa/hoa.ui.sanity_image@0.0.8":
   version "0.0.8"
   resolved "https://node.bit.dev/@hoa/hoa.ui.sanity_image/-/@hoa-hoa.ui.sanity_image-0.0.8.tgz#2f9fa7722897bd29beba56c2556975b33c53febf"
