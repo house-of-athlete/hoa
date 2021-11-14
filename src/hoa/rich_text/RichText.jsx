@@ -2,12 +2,12 @@ import BlockContent from "@sanity/block-content-to-react"
 import PropTypes from "prop-types"
 import React, { createContext, useContext } from "react"
 import styled from "@emotion/styled"
-import BlockRenderer from "./serializers/BlockRenderer"
-import InternalLinkSerializer from "./serializers/InternalLinkSerializer"
-import LinkSerializer from "./serializers/LinkSerializer"
-import SmallSerializer from "./serializers/SmallSerializer"
-import SocialLinksSerializer from "./serializers/SocialLinksSerializer"
-import VideoModalSerializer from "./serializers/VideoModalSerializer"
+import { BlockRenderer } from "./serializers/BlockRenderer"
+import { InternalLinkSerializer } from "./serializers/InternalLinkSerializer"
+import { LinkSerializer } from "./serializers/LinkSerializer"
+import { SmallSerializer } from "./serializers/SmallSerializer"
+import { SocialLinksSerializer } from "./serializers/SocialLinksSerializer"
+import { VideoModalSerializer } from "./serializers/VideoModalSerializer"
 
 const serializers = {
   marks: {

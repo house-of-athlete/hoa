@@ -7,7 +7,7 @@ const Styled = styled.div`
   margin-top: 15px;
 `
 
-const SocialLinksSerializer = ({ node: { socialItems } }) => (
+export const SocialLinksSerializer = ({ node: { socialItems } }) => (
   <Styled>
     <SocialLinks items={socialItems} />
   </Styled>
@@ -16,5 +16,3 @@ const SocialLinksSerializer = ({ node: { socialItems } }) => (
 SocialLinksSerializer.propTypes = {
   node: PropTypes.object.isRequired,
 }
-
-export default SocialLinksSerializer
