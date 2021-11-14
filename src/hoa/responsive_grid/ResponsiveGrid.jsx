@@ -1,8 +1,8 @@
 import PropTypes from "prop-types"
 import React, { useContext } from "react"
 import styled from "@emotion/styled"
-import { computeGridSizesAttr } from "./compute_grid_sizes_attr"
-import { MaxWidthContext, SizesContext } from "@hoa/hoa.ui.use_full_width_sizes"
+import { computeGridSizesAttr } from "./computeGridSizesAttr"
+import { MaxWidthContext, SizesContext } from "../use_full_width_sizes"
 
 export const tabletMin = 768 // Tailwind "md"
 export const desktopMin = 1024 // Tailwind "lg"
