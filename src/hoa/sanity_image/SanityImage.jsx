@@ -7,7 +7,7 @@ import React, {
   useState,
 } from "react"
 import styled from "@emotion/styled"
-import { useFullWidthSizes } from "@hoa/hoa.ui.use_full_width_sizes"
+import { useFullWidthSizes } from "../use_full_width_sizes"
 import { sanityImageUrl } from "./sanityUtil"
 
 export const ImgLoadingContext = createContext()

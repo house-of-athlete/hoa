@@ -10,8 +10,6 @@
   "devDependencies": {
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
-    "@hoa/hoa.ui.image_or_video": "^0.0.21",
-    "@hoa/hoa.ui.responsive_grid": "^0.0.2",
     "@houseofathlete/eslint-config-hoa": "^2.0.0",
     "@sanity/block-content-to-react": "^3.0.0",
     "@testing-library/jest-dom": "^5.15.0",

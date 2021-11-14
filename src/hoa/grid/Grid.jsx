@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "@emotion/styled"
 import { SanityImage } from "../sanity_image"
-import { ResponsiveGrid } from "@hoa/hoa.ui.responsive_grid"
+import { ResponsiveGrid } from "../responsive_grid"
 import { CMSLink } from "../links"
 
 const StyledGridItem = styled.div`

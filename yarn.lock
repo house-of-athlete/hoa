@@ -1099,45 +1099,6 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@hoa/hoa.ui.image_or_video@^0.0.21":
-  version "0.0.21"
-  resolved "https://node.bit.dev/@hoa/hoa.ui.image_or_video/-/@hoa-hoa.ui.image_or_video-0.0.21.tgz#cdd6c9d26cd4767f78d12508f7d8c74cd5111f3d"
-  integrity sha1-zdbJ0mzUdn940SUI99jHTNURHz0=
-  dependencies:
-    "@hoa/hoa.ui.mux_video" "0.0.9"
-    "@hoa/hoa.ui.sanity_image" "0.0.8"
-    core-js "^3.0.0"
-
-"@hoa/hoa.ui.mux_video@0.0.9":
-  version "0.0.9"
-  resolved "https://node.bit.dev/@hoa/hoa.ui.mux_video/-/@hoa-hoa.ui.mux_video-0.0.9.tgz#123dd53b263f9864f991b3b2efa78f71dd4f89d4"
-  integrity sha1-Ej3VOyY/mGT5kbOy76ePcd1PidQ=
-  dependencies:
-    core-js "^3.0.0"
-
-"@hoa/hoa.ui.responsive_grid@^0.0.2":
-  version "0.0.2"
-  resolved "https://node.bit.dev/@hoa/hoa.ui.responsive_grid/-/@hoa-hoa.ui.responsive_grid-0.0.2.tgz#ed1f15e0297e701e22b13eb2547cc585b303bc0b"
-  integrity sha1-7R8V4Cl+cB4isT6yVHzFhbMDvAs=
-  dependencies:
-    "@hoa/hoa.ui.use_full_width_sizes" "0.0.5"
-    core-js "^3.0.0"
-
-"@hoa/hoa.ui.sanity_image@0.0.8":
-  version "0.0.8"
-  resolved "https://node.bit.dev/@hoa/hoa.ui.sanity_image/-/@hoa-hoa.ui.sanity_image-0.0.8.tgz#2f9fa7722897bd29beba56c2556975b33c53febf"
-  integrity sha1-L5+nciiXvSm+ulbCVWl1szxT/r8=
-  dependencies:
-    "@hoa/hoa.ui.use_full_width_sizes" "0.0.5"
-    core-js "^3.0.0"
-
-"@hoa/hoa.ui.use_full_width_sizes@0.0.5":
-  version "0.0.5"
-  resolved "https://node.bit.dev/@hoa/hoa.ui.use_full_width_sizes/-/@hoa-hoa.ui.use_full_width_sizes-0.0.5.tgz#20a6d6cdc66e2f76a67512a350ae061ce60f519b"
-  integrity sha1-IKbWzcZuL3amdRKjUK4GHOYPUZs=
-  dependencies:
-    core-js "^3.0.0"
-
 "@houseofathlete/eslint-config-hoa@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@houseofathlete/eslint-config-hoa/-/eslint-config-hoa-2.0.0.tgz#51a2ab282c4945894f834937593cf58ae67c9b69"
@@ -2241,11 +2202,6 @@ core-js-pure@^3.19.0:
   version "3.19.1"
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.19.1.tgz#edffc1fc7634000a55ba05e95b3f0fe9587a5aa4"
   integrity sha512-Q0Knr8Es84vtv62ei6/6jXH/7izKmOrtrxH9WJTHLCMAVeU+8TF8z8Nr08CsH4Ot0oJKzBzJJL9SJBYIv7WlfQ==
-
-core-js@^3.0.0:
-  version "3.19.1"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.19.1.tgz#f6f173cae23e73a7d88fa23b6e9da329276c6641"
-  integrity sha512-Tnc7E9iKd/b/ff7GFbhwPVzJzPztGrChB8X8GLqoYGdEOG8IpLnK1xPyo3ZoO3HsK6TodJS58VGPOxA+hLHQMg==
 
 cosmiconfig@^6.0.0:
   version "6.0.0"
