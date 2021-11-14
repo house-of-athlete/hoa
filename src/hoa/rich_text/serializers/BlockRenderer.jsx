@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import BlockContent from "@sanity/block-content-to-react"
 
-const BlockRenderer = props => {
+export const BlockRenderer = props => {
   const {
     node: { style = "normal" },
   } = props
@@ -20,5 +20,3 @@ BlockRenderer.propTypes = {
   children: PropTypes.node,
   node: PropTypes.object,
 }
-
-export default BlockRenderer
