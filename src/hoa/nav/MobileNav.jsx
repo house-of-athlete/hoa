@@ -1,8 +1,8 @@
 import PropTypes from "prop-types"
 import React, { useEffect, useState } from "react"
 import styled from "@emotion/styled"
-import { CloseButton } from "../../vendor/hoa/close_button"
-import MobileNavScreen from "./MobileNavScreen"
+import { CloseButton } from "../close_button"
+import { MobileNavScreen } from "./MobileNavScreen"
 import { Transition, TransitionGroup } from "react-transition-group"
 import isPropValid from "@emotion/is-prop-valid"
 
@@ -42,7 +42,7 @@ const SlideContainer = styled(TransitionGroup, {
   transition: transform ${timeout / 1000}s ease-in-out;
 `
 
-const MobileNav = ({ convertNavItem, navigation, onHide }) => {
+export const MobileNav = ({ convertNavItem, navigation, onHide }) => {
   useEffect(() => {
     const hide = () => {
       onHide()
@@ -95,5 +95,3 @@ MobileNav.propTypes = {
   navigation: PropTypes.object.isRequired,
   onHide: PropTypes.func.isRequired,
 }
-
-export default MobileNav

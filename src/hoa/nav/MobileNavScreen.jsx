@@ -1,10 +1,9 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "@emotion/styled"
-import { EventLink } from "../../vendor/hoa/links"
-import { ChevronRight, ChevronLeft } from "../../vendor/hoa/icons"
-import { SocialLinks } from "../../vendor/hoa/social_links"
-import { CMSLink } from "../../vendor/hoa/links/CMSLink"
+import { EventLink, CMSLink } from "../links"
+import { ChevronRight, ChevronLeft } from "../icons"
+import { SocialLinks } from "../social_links"
 
 const StyledItem = styled.a`
   align-items: center;
@@ -79,7 +78,7 @@ const SocialLinksContainer = styled.div`
   }
 `
 
-const MobileNavScreen = ({
+export const MobileNavScreen = ({
   convertNavItem = i => i,
   navigation,
   onNavigate,
@@ -115,5 +114,3 @@ MobileNavScreen.propTypes = {
   onNavigateBack: PropTypes.func.isRequired,
   socialItems: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
-
-export default MobileNavScreen

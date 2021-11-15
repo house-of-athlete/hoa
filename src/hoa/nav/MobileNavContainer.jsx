@@ -1,10 +1,10 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "@emotion/styled"
-import { ModalBackground } from "../../vendor/hoa/modal"
+import { ModalBackground } from "../modal"
 import { CSSTransition } from "react-transition-group"
-import MobileNav from "./MobileNav"
-import { PreventScrolling } from "../../vendor/hoa/prevent_scrolling"
+import { MobileNav } from "./MobileNav"
+import { PreventScrolling } from "../prevent_scrolling"
 
 const timeout = 400
 
@@ -45,7 +45,7 @@ const FixedContainer = styled.div`
   }
 `
 
-const MobileNavContainer = ({
+export const MobileNavContainer = ({
   convertNavItem,
   isExpanded,
   navigation,
@@ -80,5 +80,3 @@ MobileNavContainer.propTypes = {
   navigation: PropTypes.object.isRequired,
   onHide: PropTypes.func.isRequired,
 }
-
-export default MobileNavContainer
