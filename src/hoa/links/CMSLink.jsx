@@ -26,10 +26,12 @@ const getComponentAndProps = link => {
 
     case "externalLink":
     case "externalLinkButton":
+    case "externalLinkNavItem":
       return [ExternalLink, { href: link.url }]
 
     case "internalLink":
     case "internalLinkButton":
+    case "internalLinkNavItem":
       if (!isFunction(CMSLink.getInternalLink)) {
         throw new Error(
           `CMSLink.getInternalLink not set; see https://bit.dev/hoa/hoa/ui/cms_link`
