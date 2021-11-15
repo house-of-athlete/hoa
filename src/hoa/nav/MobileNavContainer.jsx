@@ -27,7 +27,7 @@ const Styled = styled.div`
 `
 
 const FixedContainer = styled.div`
-  background: rgb(244, 244, 244);
+  background: var(--hoa-mobile-nav-background, purple);
   bottom: 0;
   left: 0;
   overflow-x: hidden;
@@ -35,6 +35,7 @@ const FixedContainer = styled.div`
   top: 0;
   transition: transform ${timeout / 1000}s ease-in-out;
   will-change: transform;
+  z-index: var(--hoa-mobile-nav-container-z-index, auto);
 
   @media (max-width: 479px) {
     width: 100%;

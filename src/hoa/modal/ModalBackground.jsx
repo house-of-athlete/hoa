@@ -25,7 +25,7 @@ const Styled = styled.div`
 
 // FIXME background and z-index
 const Overlay = styled.div`
-  background: var(--color-default-text);
+  background: var(--hoa-modal-background, purple);
   bottom: 0;
   left: 0;
   opacity: ${overlayOpacity};
@@ -33,6 +33,7 @@ const Overlay = styled.div`
   right: 0;
   top: 0;
   transition: opacity ${({ timeout }) => timeout / 1000}s ease-in-out;
+  z-index: var(--hoa-modal-background-z-index, auto);
 `
 
 export const ModalBackground = ({ isExpanded, onClick, timeout = 400 }) => (
