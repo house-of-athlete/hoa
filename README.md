@@ -11,4 +11,6 @@ The following CSS classes can be used to customize styles:
 
 ## CSS Variables
 
+- `--hoa-grid-column-gap` and `--hoa-grid-row-gap`: Grid gaps
+- `--hoa-grid-overlay-font-weight`: Font weight to use in grid overlay
 - `--hoa-nav-button-color`
