@@ -6,7 +6,7 @@ import { MuxVideo } from "../mux_video"
 import { PreventScrolling } from "../prevent_scrolling"
 
 const StyledCloseButton = styled(CloseButton)`
-  --hoa-close-button-color: var(--hoa-video-modal-close-button-color, #fff);
+  --hoa-nav-button-color: var(--hoa-video-modal-close-button-color, #fff);
 `
 
 export const VideoModal = ({ onClose, video }) => (
