@@ -1,25 +1,51 @@
 import PropTypes from "prop-types"
-import React from "react"
+import React, { createContext, useContext } from "react"
 import { EventLink } from "./EventLink"
 import { ExternalLink } from "./ExternalLink"
 import { VideoModalLink } from "../video_modal"
 import { isFunction, pick } from "lodash"
 
-const getComponentAndProps = link => {
+const CMSLinkConfigContext = createContext()
+
+export const CMSLinkConfigProvider = ({ children, ...props }) => {
+  const existingConfig = useContext(CMSLinkConfigContext) || {}
+
+  const config = {
+    ...existingConfig,
+    ...pick(props, ["getInternalLink", "performAction"]),
+  }
+
+  if (
+    !isFunction(config.getInternalLink) ||
+    !isFunction(config.performAction)
+  ) {
+    throw new Error(
+      `CMSLink is missing configuration; see https://github.com/house-of-athlete/hoa`
+    )
+  }
+
+  return (
+    <CMSLinkConfigContext.Provider value={config}>
+      {children}
+    </CMSLinkConfigContext.Provider>
+  )
+}
+
+CMSLinkConfigProvider.propTypes = {
+  children: PropTypes.node,
+  getInternalLink: PropTypes.func,
+  performAction: PropTypes.func,
+}
+
+const getComponentAndProps = (link, { getInternalLink, performAction }) => {
   switch (link?._type) {
     case "actionLink":
     case "actionButton":
-      if (!isFunction(CMSLink.performAction)) {
-        throw new Error(
-          `CMSLink.performAction not set; see https://bit.dev/hoa/hoa/ui/cms_link`
-        )
-      }
-
       return [
         EventLink,
         {
           onClick: () => {
-            CMSLink.performAction(link.action)
+            performAction(link.action)
           },
         },
       ]
@@ -32,14 +58,7 @@ const getComponentAndProps = link => {
     case "internalLink":
     case "internalLinkButton":
     case "internalLinkNavItem":
-      // FIXME from context
-      if (!isFunction(CMSLink.getInternalLink)) {
-        throw new Error(
-          `CMSLink.getInternalLink not set; see https://bit.dev/hoa/hoa/ui/cms_link`
-        )
-      }
-
-      return CMSLink.getInternalLink(link.document)
+      return getInternalLink(link.document)
 
     case "videoModalLink":
       return [VideoModalLink, { video: link.video }]
@@ -54,13 +73,15 @@ const getComponentAndProps = link => {
  * from Sanity.
  */
 export const CMSLink = ({ children, link, isOptional, ...props }) => {
+  const config = useContext(CMSLinkConfigContext)
+
   props = pick(props, ["className", "onClick"])
 
   if (isFunction(children)) {
     if (!link && isOptional) {
       return children({ ...props, as: "span" })
     } else {
-      const [LinkComponent, componentProps] = getComponentAndProps(link)
+      const [LinkComponent, componentProps] = getComponentAndProps(link, config)
 
       return children({ ...props, ...componentProps, as: LinkComponent })
     }
@@ -68,7 +89,7 @@ export const CMSLink = ({ children, link, isOptional, ...props }) => {
     if (!link && isOptional) {
       return <span {...props}>{children}</span>
     } else {
-      const [LinkComponent, componentProps] = getComponentAndProps(link)
+      const [LinkComponent, componentProps] = getComponentAndProps(link, config)
 
       return (
         <LinkComponent {...props} {...componentProps}>

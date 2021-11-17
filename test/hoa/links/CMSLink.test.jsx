@@ -1,27 +1,40 @@
+import PropTypes from "prop-types"
 import React from "react"
 import { render } from "@testing-library/react"
-import { CMSLink } from "../../../src/hoa/links"
+import { CMSLink, CMSLinkConfigProvider } from "../../../src/hoa/links"
 
-// FIXME provide with context
-CMSLink.getInternalLink = document => [
-  props => <a {...props} />,
-  { href: document.path.current, children: "Internal Link" },
-]
+const TestConfigProvider = ({ children }) => (
+  <CMSLinkConfigProvider
+    getInternalLink={document => [
+      props => <a {...props} />,
+      { href: document.path.current, children: "Internal Link" },
+    ]}
+    performAction={() => {}}
+  >
+    {children}
+  </CMSLinkConfigProvider>
+)
+
+TestConfigProvider.propTypes = {
+  children: PropTypes.node,
+}
 
 it("should render CMSLink with internal link", () => {
   const { getByText } = render(
-    <CMSLink
-      link={{
-        _key: "d3d49d559627",
-        _type: "internalLink",
-        document: {
-          _type: "collection",
-          path: { _type: "slug", current: "/apparel" },
-        },
-      }}
-    >
-      Internal Link
-    </CMSLink>
+    <TestConfigProvider>
+      <CMSLink
+        link={{
+          _key: "d3d49d559627",
+          _type: "internalLink",
+          document: {
+            _type: "collection",
+            path: { _type: "slug", current: "/apparel" },
+          },
+        }}
+      >
+        Internal Link
+      </CMSLink>
+    </TestConfigProvider>
   )
   const rendered = getByText("Internal Link")
 
@@ -56,19 +69,21 @@ it("should render link with custom CSS class", () => {
 
 it("should render BasicVideoModalLink", () => {
   const { getByText } = render(
-    <CMSLink
-      link={{
-        _type: "videoModalLink",
-        video: {
-          _type: "mux.videoAsset",
-          data: { aspect_ratio: "1024:473" },
-          playbackId: "GM01ihvcrnrjUx02dcVYe26vLDWuWUN00f9dhOGo6Pg00vY",
-          thumbTime: 4.621051,
-        },
-      }}
-    >
-      Video Link
-    </CMSLink>
+    <TestConfigProvider>
+      <CMSLink
+        link={{
+          _type: "videoModalLink",
+          video: {
+            _type: "mux.videoAsset",
+            data: { aspect_ratio: "1024:473" },
+            playbackId: "GM01ihvcrnrjUx02dcVYe26vLDWuWUN00f9dhOGo6Pg00vY",
+            thumbTime: 4.621051,
+          },
+        }}
+      >
+        Video Link
+      </CMSLink>
+    </TestConfigProvider>
   )
 
   const rendered = getByText("Video Link")
