@@ -23,7 +23,6 @@ const Styled = styled.div`
   }
 `
 
-// FIXME background and z-index
 const Overlay = styled.div`
   background: var(--hoa-modal-background, purple);
   bottom: 0;
