@@ -2,6 +2,7 @@ import React from "react"
 import { render } from "@testing-library/react"
 import { CMSLink } from "../../../src/hoa/links"
 
+// FIXME provide with context
 CMSLink.getInternalLink = document => [
   props => <a {...props} />,
   { href: document.path.current, children: "Internal Link" },

@@ -32,6 +32,7 @@ const getComponentAndProps = link => {
     case "internalLink":
     case "internalLinkButton":
     case "internalLinkNavItem":
+      // FIXME from context
       if (!isFunction(CMSLink.getInternalLink)) {
         throw new Error(
           `CMSLink.getInternalLink not set; see https://bit.dev/hoa/hoa/ui/cms_link`
