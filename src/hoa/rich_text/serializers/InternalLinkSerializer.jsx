@@ -3,9 +3,11 @@ import React from "react"
 import { CMSLink } from "../../links"
 
 export const InternalLinkSerializer = ({ children, mark }) => {
-  const [LinkComponent, props] = CMSLink.getInternalLink(mark.doc)
+  // CMSLink expects `document` field, not `doc`. We might want to rename these for consistency.
+  const { doc, ...link } = mark
+  link.document = doc
 
-  return <LinkComponent {...props}>{children}</LinkComponent>
+  return <CMSLink link={link}>{children}</CMSLink>
 }
 
 InternalLinkSerializer.propTypes = {
