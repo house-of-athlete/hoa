@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@emotion/react": "^11.5.0",
-    "@emotion/styled": "^11.3.0",
+    "@emotion/styled": "^11.6.0",
     "@houseofathlete/eslint-config-hoa": "^2.0.0",
     "@sanity/block-content-to-react": "^3.0.0",
     "@testing-library/jest-dom": "^5.15.0",
