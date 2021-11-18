@@ -7,9 +7,9 @@ import { SocialLinks } from "../social_links"
 
 const StyledItem = styled.a`
   align-items: center;
-  border-bottom: var(--mobile-nav-border);
+  border-bottom: var(--hoa-mobile-nav-border);
   display: flex;
-  height: var(--mobile-nav-item-height);
+  height: var(--hoa-mobile-nav-item-height);
   justify-content: space-between;
   padding: 0 var(--hoa-mobile-nav-side-padding);
 `
@@ -57,10 +57,10 @@ const Styled = styled.div`
 
 const BackNav = styled(EventLink)`
   align-items: center;
-  border-bottom: var(--mobile-nav-border);
+  border-bottom: var(--hoa-mobile-nav-border);
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  height: var(--mobile-nav-item-height);
+  height: var(--hoa-mobile-nav-item-height);
   font-weight: var(--weight-bold);
   padding: 0 var(--hoa-mobile-nav-side-padding);
 `

@@ -16,7 +16,7 @@ const Styled = styled.div`
 
 const Header = styled.div`
   align-items: center;
-  border-bottom: var(--mobile-nav-border);
+  border-bottom: var(--hoa-mobile-nav-border);
   display: flex;
   height: var(--top-nav-height);
   padding: 0 var(--hoa-mobile-nav-side-padding);
