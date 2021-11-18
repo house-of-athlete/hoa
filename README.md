@@ -28,7 +28,7 @@ Component that renders links from the CMS. Supported link types are:
 - `actionLink`: A link that performs and action.
 - `videoModalLink`: A link that opens a modal containing a video player.
 
-Configuration must be provided for `CMSLink` using ``. Here is an example that configures internal links to be rendered using Gatsby's `Link` component:
+Configuration must be provided for `CMSLink` using `CMSLinkConfigProvider`. Here is an example that configures internal links to be rendered using Gatsby's `Link` component:
 
 ```javascript
 import { CMSLinkConfigProvider } from "../../vendor/hoa/links"
