@@ -3,7 +3,7 @@ import React from "react"
 import { CMSLink } from "../../links"
 
 export const InternalLinkSerializer = ({ children, mark }) => {
-  // inconsistent naming "doc" vs "document"
+  // CMSLink expects `document` field, not `doc`. We might want to rename these for consistency.
   const { doc, ...link } = mark
   link.document = doc
 
