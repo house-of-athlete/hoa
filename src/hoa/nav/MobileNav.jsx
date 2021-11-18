@@ -19,7 +19,7 @@ const Header = styled.div`
   border-bottom: var(--mobile-nav-border);
   display: flex;
   height: var(--top-nav-height);
-  padding: 0 var(--mobile-nav-side-padding);
+  padding: 0 var(--hoa-mobile-nav-side-padding);
 `
 
 const StyledCloseButton = styled(CloseButton)`

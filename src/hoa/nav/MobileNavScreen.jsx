@@ -11,7 +11,7 @@ const StyledItem = styled.a`
   display: flex;
   height: var(--mobile-nav-item-height);
   justify-content: space-between;
-  padding: 0 var(--mobile-nav-side-padding);
+  padding: 0 var(--hoa-mobile-nav-side-padding);
 `
 
 const NestedItem = ({ item, onNavigate }) => (
@@ -62,7 +62,7 @@ const BackNav = styled(EventLink)`
   grid-template-columns: 1fr auto 1fr;
   height: var(--mobile-nav-item-height);
   font-weight: var(--weight-bold);
-  padding: 0 var(--mobile-nav-side-padding);
+  padding: 0 var(--hoa-mobile-nav-side-padding);
 `
 
 const SocialLinksContainer = styled.div`
@@ -70,7 +70,7 @@ const SocialLinksContainer = styled.div`
   display: grid;
   font-size: 1rem;
   font-weight: var(--weight-slight-bold);
-  padding: 20px var(--mobile-nav-side-padding) 35px;
+  padding: 20px var(--hoa-mobile-nav-side-padding) 35px;
   row-gap: 15px;
 
   ${Styled}:not(:first-of-type) & {
