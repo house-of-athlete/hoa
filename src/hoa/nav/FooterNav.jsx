@@ -15,8 +15,7 @@ const StyledSubItem = styled.a`
   &:visited,
   &:hover,
   &:active {
-    // FIXME CSS var
-    color: var(--color-dark-gray);
+    color: var(--hoa-footer-color);
   }
 `
 

@@ -13,6 +13,7 @@ The following CSS classes can be used to customize styles:
 
 ### CSS Variables
 
+- `--hoa-footer-color`
 - `--hoa-mobile-nav-border`
 - `--hoa-mobile-nav-item-height`
 - `--hoa-mobile-nav-side-padding`
