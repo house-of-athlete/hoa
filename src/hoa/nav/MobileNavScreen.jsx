@@ -69,7 +69,7 @@ const SocialLinksContainer = styled.div`
   color: #c4c4c4;
   display: grid;
   font-size: 1rem;
-  font-weight: var(--weight-slight-bold);
+  font-weight: var(--hoa-mobile-nav-social-font-weight, 550);
   padding: 20px var(--hoa-mobile-nav-side-padding) 35px;
   row-gap: 15px;
 
