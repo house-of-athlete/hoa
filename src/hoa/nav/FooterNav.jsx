@@ -142,6 +142,18 @@ NestedTopLevelItem.propTypes = {
   name: PropTypes.string.isRequired,
 }
 
+const TopLevelLink = ({ link: { name, ...link } }) => (
+  <StyledTopLevelItem>
+    <CMSLink link={link}>
+      <StyledTopLevelHeading>{name}</StyledTopLevelHeading>
+    </CMSLink>
+  </StyledTopLevelItem>
+)
+
+TopLevelLink.propTypes = {
+  link: PropTypes.object.isRequired,
+}
+
 const Styled = styled.footer`
   font-size: 0.8125rem;
 
@@ -171,7 +183,7 @@ export const FooterNav = ({ copyrightMessage, footerItems, legalItems }) => (
         item._type === "footerNestedNavItem" ? (
           <NestedTopLevelItem key={item._key} {...item} />
         ) : (
-          <div key={item._key}>other</div>
+          <TopLevelLink key={item._key} link={item} />
         )
       )}
     </FooterItems>
