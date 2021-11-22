@@ -21,10 +21,26 @@ ChevronRight.propTypes = {
   className: PropTypes.string,
 }
 
+export const ChevronDown = ({ className }) => (
+  <ChevronRight className={classNames(className, "transform rotate-90")} />
+)
+
+ChevronDown.propTypes = {
+  className: PropTypes.string,
+}
+
 export const ChevronLeft = ({ className }) => (
   <ChevronRight className={classNames(className, "transform rotate-180")} />
 )
 
 ChevronLeft.propTypes = {
+  className: PropTypes.string,
+}
+
+export const ChevronUp = ({ className }) => (
+  <ChevronRight className={classNames(className, "transform -rotate-90")} />
+)
+
+ChevronUp.propTypes = {
   className: PropTypes.string,
 }

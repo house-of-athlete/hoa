@@ -1,1 +1,1 @@
-export { ChevronLeft, ChevronRight } from "./chevrons"
+export { ChevronDown, ChevronLeft, ChevronRight, ChevronUp } from "./chevrons"
