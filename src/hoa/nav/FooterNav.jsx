@@ -1,17 +1,12 @@
 import PropTypes from "prop-types"
 import React, { useContext, useState } from "react"
 import styled from "@emotion/styled"
-import { Link } from "gatsby"
-import { convertNavItem } from "../lib/navigation"
-import CMSContext from "./context/CMSContext"
-import { ExternalLink, CMSLink } from "../vendor/hoa/links"
-import internalLinkPath from "../lib/internalLinkPath"
-import { MOBILE_NAV_MAX, DESKTOP_NAV_MIN } from "./CSSVariables"
-import Copyright from "./Copyright"
-import { ChevronDown, ChevronUp } from "../vendor/hoa/icons"
+import { CMSLink } from "../links"
+import { Copyright } from "./Copyright"
+import { ChevronDown, ChevronUp } from "../icons"
 
-const mobileFooterMQ = `(max-width: ${MOBILE_NAV_MAX}px)`
-const desktopFooterMQ = `(min-width: ${DESKTOP_NAV_MIN}px)`
+const mobileFooterMQ = `(max-width: 1023px)`
+const desktopFooterMQ = `(min-width: 1024px)`
 
 const StyledSubItem = styled.a`
   display: block;
@@ -48,24 +43,6 @@ const renderSubItem = item => {
     case "navigationDivider":
       return <div key={item._key}>&nbsp;</div>
 
-    case "externalLinkNavItem":
-      return (
-        <StyledSubItem key={_key} as={ExternalLink} href={item.url}>
-          {name}
-        </StyledSubItem>
-      )
-
-    case "internalLinkNavItem":
-      return (
-        <StyledSubItem
-          key={_key}
-          as={Link}
-          to={internalLinkPath(item.document)}
-        >
-          {name}
-        </StyledSubItem>
-      )
-
     case "footerNestedNavItem":
       return (
         <ItemsContainer key={_key}>
@@ -80,7 +57,11 @@ const renderSubItem = item => {
       )
 
     default:
-      throw new Error(`unknown mobile nav type: ${_type}`)
+      return (
+        <StyledSubItem as={CMSLink} key={_key} link={item}>
+          {name}
+        </StyledSubItem>
+      )
   }
 }
 
@@ -184,24 +165,20 @@ const FooterItems = styled.div`
   }
 `
 
-export const FooterNav = () => {
-  const {
-    navigation: { footerItems, legalItems },
-  } = useContext(CMSContext)
+export const FooterNav = ({ copyrightMessage, footerItems, legalItems }) => (
+  <Styled>
+    <FooterItems>
+      {footerItems.map(item => (
+        <TopLevelItem key={item._key} {...item} />
+      ))}
+    </FooterItems>
 
-  return (
-    <Styled>
-      <FooterItems>
-        {footerItems
-          .map(item => convertNavItem(item, { type: "footerNestedNavItem" }))
-          .map(item => (
-            <TopLevelItem key={item._key} {...item} />
-          ))}
-      </FooterItems>
+    <Copyright items={legalItems} message={copyrightMessage} />
+  </Styled>
+)
 
-      <Copyright items={legalItems} />
-    </Styled>
-  )
+FooterNav.propTypes = {
+  copyrightMessage: PropTypes.string.isRequired,
+  footerItems: PropTypes.arrayOf(PropTypes.object).isRequired,
+  legalItems: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
-
-FooterNav.propTypes = {}
