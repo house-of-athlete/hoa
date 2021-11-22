@@ -108,53 +108,38 @@ const TopLevelItemsContainer = styled(ItemsContainer)`
   }
 `
 
-const TopLevelItem = props => {
+const NestedTopLevelItem = ({ headingLink, items, name }) => {
   const [isExpanded, setExpanded] = useState(false)
 
-  switch (props._type) {
-    case "footerNestedNavItem": {
-      const { headingLink, items, name } = props
-
-      const onHeadingClick = event => {
-        if (window.matchMedia(mobileFooterMQ).matches) {
-          event.preventDefault()
-          setExpanded(b => !b)
-        }
-      }
-
-      return (
-        <StyledTopLevelItem>
-          <CMSLink link={headingLink} isOptional onClick={onHeadingClick}>
-            {({ ...props }) => (
-              <StyledTopLevelHeading {...props}>
-                {name}
-
-                <HeadingImg as={isExpanded ? ChevronUp : ChevronDown} />
-              </StyledTopLevelHeading>
-            )}
-          </CMSLink>
-
-          <TopLevelItemsContainer $isCollapsed={!isExpanded}>
-            {items.map(renderSubItem)}
-          </TopLevelItemsContainer>
-        </StyledTopLevelItem>
-      )
-    }
-
-    default: {
-      const { name, ...link } = props
-
-      return (
-        <StyledTopLevelItem>
-          <CMSLink link={link} isOptional>
-            {({ ...props }) => (
-              <StyledTopLevelHeading {...props}>{name}</StyledTopLevelHeading>
-            )}
-          </CMSLink>
-        </StyledTopLevelItem>
-      )
+  const onHeadingClick = event => {
+    if (window.matchMedia(mobileFooterMQ).matches) {
+      event.preventDefault()
+      setExpanded(b => !b)
     }
   }
+
+  return (
+    <StyledTopLevelItem>
+      <CMSLink link={headingLink} isOptional onClick={onHeadingClick}>
+        {({ ...props }) => (
+          <StyledTopLevelHeading {...props}>
+            {name}
+            <HeadingImg as={isExpanded ? ChevronUp : ChevronDown} />
+          </StyledTopLevelHeading>
+        )}
+      </CMSLink>
+
+      <TopLevelItemsContainer $isCollapsed={!isExpanded}>
+        {items.map(renderSubItem)}
+      </TopLevelItemsContainer>
+    </StyledTopLevelItem>
+  )
+}
+
+NestedTopLevelItem.propTypes = {
+  headingLink: PropTypes.object,
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+  name: PropTypes.string.isRequired,
 }
 
 const Styled = styled.footer`
@@ -182,9 +167,13 @@ const FooterItems = styled.div`
 export const FooterNav = ({ copyrightMessage, footerItems, legalItems }) => (
   <Styled>
     <FooterItems>
-      {footerItems.map(item => (
-        <TopLevelItem key={item._key} {...item} />
-      ))}
+      {footerItems.map(item =>
+        item._type === "footerNestedNavItem" ? (
+          <NestedTopLevelItem key={item._key} {...item} />
+        ) : (
+          <div key={item._key}>other</div>
+        )
+      )}
     </FooterItems>
 
     <Copyright items={legalItems} message={copyrightMessage} />
