@@ -108,38 +108,53 @@ const TopLevelItemsContainer = styled(ItemsContainer)`
   }
 `
 
-const TopLevelItem = ({ headingLink, items, name }) => {
+const TopLevelItem = props => {
   const [isExpanded, setExpanded] = useState(false)
 
-  const onHeadingClick = event => {
-    if (window.matchMedia(mobileFooterMQ).matches) {
-      event.preventDefault()
-      setExpanded(b => !b)
+  switch (props._type) {
+    case "footerNestedNavItem": {
+      const { headingLink, items, name } = props
+
+      const onHeadingClick = event => {
+        if (window.matchMedia(mobileFooterMQ).matches) {
+          event.preventDefault()
+          setExpanded(b => !b)
+        }
+      }
+
+      return (
+        <StyledTopLevelItem>
+          <CMSLink link={headingLink} isOptional onClick={onHeadingClick}>
+            {({ ...props }) => (
+              <StyledTopLevelHeading {...props}>
+                {name}
+
+                <HeadingImg as={isExpanded ? ChevronUp : ChevronDown} />
+              </StyledTopLevelHeading>
+            )}
+          </CMSLink>
+
+          <TopLevelItemsContainer $isCollapsed={!isExpanded}>
+            {items.map(renderSubItem)}
+          </TopLevelItemsContainer>
+        </StyledTopLevelItem>
+      )
+    }
+
+    default: {
+      const { name, ...link } = props
+
+      return (
+        <StyledTopLevelItem>
+          <CMSLink link={link} isOptional>
+            {({ ...props }) => (
+              <StyledTopLevelHeading {...props}>{name}</StyledTopLevelHeading>
+            )}
+          </CMSLink>
+        </StyledTopLevelItem>
+      )
     }
   }
-
-  return (
-    <StyledTopLevelItem>
-      <CMSLink link={headingLink} isOptional onClick={onHeadingClick}>
-        {({ ...props }) => (
-          <StyledTopLevelHeading {...props}>
-            {name}
-            <HeadingImg as={isExpanded ? ChevronUp : ChevronDown} />
-          </StyledTopLevelHeading>
-        )}
-      </CMSLink>
-
-      <TopLevelItemsContainer $isCollapsed={!isExpanded}>
-        {items.map(renderSubItem)}
-      </TopLevelItemsContainer>
-    </StyledTopLevelItem>
-  )
-}
-
-TopLevelItem.propTypes = {
-  headingLink: PropTypes.object,
-  items: PropTypes.arrayOf(PropTypes.object).isRequired,
-  name: PropTypes.string.isRequired,
 }
 
 const Styled = styled.footer`
