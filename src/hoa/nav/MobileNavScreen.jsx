@@ -61,7 +61,7 @@ const BackNav = styled(EventLink)`
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   height: var(--hoa-mobile-nav-item-height);
-  font-weight: var(--weight-bold);
+  font-weight: bold;
   padding: 0 var(--hoa-mobile-nav-side-padding);
 `
 
