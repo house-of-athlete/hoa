@@ -108,7 +108,7 @@ const TopLevelItemsContainer = styled(ItemsContainer)`
   }
 `
 
-const TopLevelItem = ({ headingLink, items, name }) => {
+const NestedTopLevelItem = ({ headingLink, items, name }) => {
   const [isExpanded, setExpanded] = useState(false)
 
   const onHeadingClick = event => {
@@ -136,10 +136,22 @@ const TopLevelItem = ({ headingLink, items, name }) => {
   )
 }
 
-TopLevelItem.propTypes = {
+NestedTopLevelItem.propTypes = {
   headingLink: PropTypes.object,
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
   name: PropTypes.string.isRequired,
+}
+
+const TopLevelLink = ({ link: { name, ...link } }) => (
+  <StyledTopLevelItem>
+    <CMSLink link={link}>
+      <StyledTopLevelHeading>{name}</StyledTopLevelHeading>
+    </CMSLink>
+  </StyledTopLevelItem>
+)
+
+TopLevelLink.propTypes = {
+  link: PropTypes.object.isRequired,
 }
 
 const Styled = styled.footer`
@@ -167,9 +179,13 @@ const FooterItems = styled.div`
 export const FooterNav = ({ copyrightMessage, footerItems, legalItems }) => (
   <Styled>
     <FooterItems>
-      {footerItems.map(item => (
-        <TopLevelItem key={item._key} {...item} />
-      ))}
+      {footerItems.map(item =>
+        item._type === "footerNestedNavItem" ? (
+          <NestedTopLevelItem key={item._key} {...item} />
+        ) : (
+          <TopLevelLink key={item._key} link={item} />
+        )
+      )}
     </FooterItems>
 
     <Copyright items={legalItems} message={copyrightMessage} />
