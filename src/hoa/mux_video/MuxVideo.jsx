@@ -53,7 +53,7 @@ const getPoster = (video, { autoPlay }) => {
   return `https://image.mux.com/${video.playbackId}/thumbnail.jpg?${params}`
 }
 
-export const MuxVideo = React.forwardRef(function MuxVideoUnforwarded(
+export const MuxVideo = React.forwardRef(function MuxVideo(
   { autoPlay, video, ...props },
   ref
 ) {
