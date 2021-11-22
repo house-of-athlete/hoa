@@ -61,7 +61,7 @@ const BackNav = styled(EventLink)`
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   height: var(--hoa-mobile-nav-item-height);
-  font-weight: var(--weight-bold);
+  font-weight: bold;
   padding: 0 var(--hoa-mobile-nav-side-padding);
 `
 
@@ -69,7 +69,7 @@ const SocialLinksContainer = styled.div`
   color: #c4c4c4;
   display: grid;
   font-size: 1rem;
-  font-weight: var(--weight-slight-bold);
+  font-weight: var(--hoa-mobile-nav-social-font-weight, 550);
   padding: 20px var(--hoa-mobile-nav-side-padding) 35px;
   row-gap: 15px;
 

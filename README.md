@@ -16,6 +16,7 @@ The following CSS classes can be used to customize styles:
 - `--hoa-mobile-nav-border`
 - `--hoa-mobile-nav-item-height`
 - `--hoa-mobile-nav-side-padding`
+- `--hoa-mobile-nav-social-font-weight`
 - `--hoa-grid-column-gap` and `--hoa-grid-row-gap`: Grid gaps
 - `--hoa-grid-overlay-font-weight`: Font weight to use in grid overlay
 - `--hoa-nav-button-color`: Color used for navigation icons (left/right chevron, close button)
