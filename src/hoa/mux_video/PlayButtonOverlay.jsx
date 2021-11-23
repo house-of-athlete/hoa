@@ -13,6 +13,7 @@ const StyledButton = styled.div`
   border-radius: var(--radius) / calc(var(--radius) * var(--ar-w) / var(--ar-h));
   display: flex;
   justify-content: center;
+  max-width: 220px;
   width: 30%;
 
   @supports not (aspect-ratio: 1/1) {
