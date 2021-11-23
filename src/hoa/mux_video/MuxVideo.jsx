@@ -3,6 +3,19 @@ import React, { useEffect, useRef, useState } from "react"
 import Hls from "hls.js"
 import { isArray, isNumber } from "lodash"
 
+/**
+ * Generates video thumbnail URL. See https://docs.mux.com/guides/video/get-images-from-a-video.
+ */
+export const muxThumbnailURL = (video, params = {}) => {
+  if (isNumber(video.thumbTime)) {
+    params = { time: video.thumbTime, ...params }
+  }
+
+  const searchParams = new URLSearchParams(params)
+
+  return `https://image.mux.com/${video.playbackId}/thumbnail.jpg?${searchParams}`
+}
+
 const initVideoPlayback = ({ allowNativeHls, elem, playbackId, poster }) => {
   const hlsSrc = `https://stream.mux.com/${playbackId}.m3u8`
 
@@ -39,18 +52,9 @@ const getPoster = (video, { autoPlay }) => {
     return null
   }
 
-  const params = new URLSearchParams()
+  const params = autoPlay ? { time: 0, width: 600 } : {}
 
-  if (isNumber(video.thumbTime)) {
-    params.set("time", video.thumbTime)
-  }
-
-  if (autoPlay) {
-    params.set("time", 0)
-    params.set("width", 600)
-  }
-
-  return `https://image.mux.com/${video.playbackId}/thumbnail.jpg?${params}`
+  return muxThumbnailURL(video, params)
 }
 
 export const MuxVideo = React.forwardRef(function MuxVideo(

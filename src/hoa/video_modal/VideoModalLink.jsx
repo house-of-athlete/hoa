@@ -3,12 +3,13 @@ import React, { useState } from "react"
 import { EventLink } from "../links"
 import { VideoModal } from "./VideoModal"
 
-export const VideoModalLink = ({ children, video }) => {
+export const VideoModalLink = ({ children, className, video }) => {
   const [isModalOpen, setModalOpen] = useState(false)
 
   return (
     <>
       <EventLink
+        className={className}
         onClick={() => {
           setModalOpen(true)
         }}
@@ -30,5 +31,6 @@ export const VideoModalLink = ({ children, video }) => {
 
 VideoModalLink.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
   video: PropTypes.object.isRequired,
 }
