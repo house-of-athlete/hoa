@@ -16,10 +16,10 @@ const Styled = styled.div`
   }
 `
 
-export const YouTubePlayer = ({ id }) => (
+export const YouTubePlayer = ({ videoId }) => (
   <Styled>
     <iframe
-      src={`https://www.youtube.com/embed/${id}?autoplay=0&playsinline=1&modestbranding=1`}
+      src={`https://www.youtube.com/embed/${videoId}?autoplay=0&playsinline=1&modestbranding=1`}
       title="YouTube video player"
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -29,5 +29,5 @@ export const YouTubePlayer = ({ id }) => (
 )
 
 YouTubePlayer.propTypes = {
-  id: PropTypes.string.isRequired,
+  videoId: PropTypes.string.isRequired,
 }
