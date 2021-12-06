@@ -5,6 +5,7 @@ import { StyledRichText } from "../rich_text"
 import { FullWidthSanityImage } from "../sanity_image"
 import { CMSLink } from "../links"
 import { PlayButtonOverlay } from "../mux_video"
+import { ImageOrVideo } from "../image_or_video"
 
 const Styled = styled.div`
   display: grid;
@@ -60,19 +61,15 @@ const RichTextContainer = styled.div`
 export const ImageByText = ({
   content,
   desktopLayout,
-  image,
   imageLink,
+  imageOrVideo,
   subtitle,
   title,
 }) => (
   <Styled desktopLayout={desktopLayout}>
     <ImageContainer>
       <CMSLink isOptional link={imageLink}>
-        <FullWidthSanityImage
-          alt={title || ""}
-          image={image}
-          sizes={`(max-width: 767px) 100vw, 50vw`}
-        />
+        <ImageOrVideo {...imageOrVideo} />
       </CMSLink>
 
       {imageLink?._type === "videoModalLink" && <PlayButtonOverlay />}
@@ -92,8 +89,8 @@ export const ImageByText = ({
 ImageByText.propTypes = {
   content: PropTypes.array.isRequired,
   desktopLayout: PropTypes.string.isRequired,
-  image: PropTypes.object.isRequired,
   imageLink: PropTypes.object,
+  imageOrVideo: PropTypes.object.isRequired,
   subtitle: PropTypes.string,
   title: PropTypes.string,
 }
