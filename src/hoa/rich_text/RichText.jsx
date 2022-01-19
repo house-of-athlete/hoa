@@ -2,25 +2,12 @@ import BlockContent from "@sanity/block-content-to-react"
 import PropTypes from "prop-types"
 import React, { createContext, useContext } from "react"
 import styled from "@emotion/styled"
-import { BlockRenderer } from "./serializers/BlockRenderer"
 import { InternalLinkSerializer } from "./serializers/InternalLinkSerializer"
 import { LinkSerializer } from "./serializers/LinkSerializer"
 import { SmallSerializer } from "./serializers/SmallSerializer"
 import { SocialLinksSerializer } from "./serializers/SocialLinksSerializer"
 import { VideoModalSerializer } from "./serializers/VideoModalSerializer"
-
-const serializers = {
-  marks: {
-    internalLink: InternalLinkSerializer,
-    link: LinkSerializer,
-    videoModal: VideoModalSerializer,
-    small: SmallSerializer,
-  },
-  types: {
-    block: BlockRenderer,
-    blockContentSocialLinks: SocialLinksSerializer,
-  },
-}
+import { createBlockRenderer } from "./serializers/createBlockRenderer"
 
 const RichTextConfigContext = createContext()
 
@@ -35,8 +22,21 @@ RichTextConfigProvider.propTypes = {
   sanityConfig: PropTypes.object.isRequired,
 }
 
-export const RichText = ({ blocks, className }) => {
+export const RichText = ({ blocks, blockStyleRenderers, className }) => {
   const sanityConfig = useContext(RichTextConfigContext)
+
+  const serializers = {
+    marks: {
+      internalLink: InternalLinkSerializer,
+      link: LinkSerializer,
+      videoModal: VideoModalSerializer,
+      small: SmallSerializer,
+    },
+    types: {
+      block: createBlockRenderer(blockStyleRenderers),
+      blockContentSocialLinks: SocialLinksSerializer,
+    },
+  }
 
   return (
     <BlockContent
@@ -52,6 +52,7 @@ export const RichText = ({ blocks, className }) => {
 
 RichText.propTypes = {
   blocks: PropTypes.array.isRequired,
+  blockStyleRenderers: PropTypes.object,
   className: PropTypes.string,
 }
 
