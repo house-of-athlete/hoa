@@ -74,6 +74,12 @@ const Styled = styled.div`
     margin: 14px 0;
   }
 
+  p,
+  ol,
+  ul {
+    font-size: var(--hoa-rich-text-paragraph-font-size);
+  }
+
   ol,
   ul {
     padding-left: 40px;
