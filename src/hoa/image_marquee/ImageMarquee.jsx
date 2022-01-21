@@ -63,8 +63,10 @@ const Items = ({ items }) => (
           )}
         </div>
 
-        {item.title && <Title>{item.title}</Title>}
-        {item.subtitle && <Subtitle>{item.subtitle}</Subtitle>}
+        <div className="px-2">
+          {item.title && <Title>{item.title}</Title>}
+          {item.subtitle && <Subtitle>{item.subtitle}</Subtitle>}
+        </div>
       </Tile>
     ))}
   </div>
