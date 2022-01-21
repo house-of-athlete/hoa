@@ -18,6 +18,16 @@ const Tile = styled(CMSLink)`
   }
 `
 
+const Title = styled.div`
+  font-size: var(--hoa-image-marquee-title-font-size, 0.875rem);
+  line-height: var(--hoa-image-marquee-title-line-height);
+`
+
+const Subtitle = styled.div`
+  font-size: var(--hoa-image-marquee-subtitle-font-size, 0.75rem);
+  line-height: var(--hoa-image-marquee-subtitle-line-height);
+`
+
 const Items = ({ items }) => (
   <div className="flex flex-grow-0 flex-shrink-0">
     {items.map(item => (
@@ -53,8 +63,8 @@ const Items = ({ items }) => (
           )}
         </div>
 
-        {item.title && <div className="text-sm">{item.title}</div>}
-        {item.subtitle && <div className="text-xs">{item.subtitle}</div>}
+        {item.title && <Title>{item.title}</Title>}
+        {item.subtitle && <Subtitle>{item.subtitle}</Subtitle>}
       </Tile>
     ))}
   </div>
