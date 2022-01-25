@@ -24,6 +24,7 @@ const Title = styled.div`
 `
 
 const Subtitle = styled.div`
+  color: var(--hoa-image-marquee-subtitle-color);
   font-size: var(--hoa-image-marquee-subtitle-font-size, 0.75rem);
   line-height: var(--hoa-image-marquee-subtitle-line-height);
 `
