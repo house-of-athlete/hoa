@@ -23,8 +23,7 @@ in the app projects in order to ensure that everything is kept in sync properly.
 ### Why not use an NPM package
 
 I tried this briefly in https://github.com/house-of-athlete/house-of-components but I wasn't happy
-with the resulting productivity. One could migrate the components in this repository into an NPM
-package if desired.
+with the resulting productivity. This is certainly a valid option if one wants to take this route.
 
 ### Why not use https://bit.dev/
 
