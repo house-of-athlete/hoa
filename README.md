@@ -20,12 +20,12 @@ We keep Github Actions workflows ([like
 this](https://github.com/house-of-athlete/hoa_gatsby/blob/99bc81002b70cc184a664737815a4b7394cb36ac/.github/workflows/check_shared_lib.yml))
 in the app projects in order to ensure that everything is kept in sync properly.
 
-### Why not use an NPM package
+### Why not use an NPM package?
 
 I tried this briefly in https://github.com/house-of-athlete/house-of-components but I wasn't happy
 with the resulting productivity. This is certainly a valid option if one wants to take this route.
 
-### Why not use https://bit.dev/
+### Why not use https://bit.dev/?
 
 I tried Bit briefly (https://github.com/house-of-athlete/components) and it resulted in terrible
 productivity. The process of exporting a Bit component, installing it in the app project, and
