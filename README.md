@@ -6,7 +6,7 @@ Component library for House of Athlete sites.
 
 This shared library is intended to be used by copying the contents into the project that will use
 the components. The sync can be automated like adding code like this to the `package.json` file in
-the app projects:
+the app project:
 
 ```json
   "scripts": {
