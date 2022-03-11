@@ -2,6 +2,36 @@
 
 Component library for House of Athlete sites.
 
+## Installation
+
+This shared library is intended to be used by copying the contents into the project that will use
+the components. The sync can be automated like adding code like this to the `package.json` file in
+the app projects:
+
+```json
+  "scripts": {
+    "sync": "rsync -avuc --delete ../hoa/src/hoa src/vendor",
+    "watch_sync": "fswatch ../hoa/src/hoa | (while read; do rsync -avuc --delete ../hoa/src/hoa src/vendor; done)",
+    ...
+  },
+```
+
+We keep Github Actions workflows ([like
+this](https://github.com/house-of-athlete/hoa_gatsby/blob/99bc81002b70cc184a664737815a4b7394cb36ac/.github/workflows/check_shared_lib.yml))
+in the app projects in order to ensure that everything is kept in sync properly.
+
+### Why not use an NPM package
+
+I tried this briefly in https://github.com/house-of-athlete/house-of-components but I wasn't happy
+with the resulting productivity. One could migrate the components in this repository into an NPM
+package if desired.
+
+### Why not use https://bit.dev/
+
+I tried Bit briefly (https://github.com/house-of-athlete/components) and it resulted in terrible
+productivity. The process of exporting a Bit component, installing it in the app project, and
+restarting the app's development server took several minutes.
+
 ## Global CSS
 
 ### CSS Classes
